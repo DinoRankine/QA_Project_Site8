@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6q8aMo923Bt1Bv7ABDDW75RaEDwxHoHMWsb6q1Ham7kY+vjjPgQh+Zt4Bibe5f+nne3TX9c0vSEXqw/XtxBuEQ==",
+  "dgSpecHash": "LcY5wU3lmL0bNMibAt0zT7RqsSzC1q287XUZHNYtmwEQZ8e3ZHZa5jTfQTMLh2q2hc+L6YRh0HUrG0TDhEZIQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\danie\\QAGroupProjectSite8\\QA_GroupProject_Site8_ConsoleAPP\\QA_GroupProject_Site8_ConsoleAPP.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Classes\\QA\\QA_Project_Site8\\QA_GroupProject_Site8_ConsoleAPP\\QA_GroupProject_Site8_ConsoleAPP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mkate\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\mkate\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
