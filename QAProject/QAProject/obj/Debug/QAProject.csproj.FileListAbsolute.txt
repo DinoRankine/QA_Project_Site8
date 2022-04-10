@@ -29,3 +29,34 @@ C:\Users\kerri\OneDrive\Documents\Quality Assurance\QAProject\QAProject\obj\Debu
 C:\Users\kerri\OneDrive\Documents\Quality Assurance\QAProject\QAProject\obj\Debug\QAProject.csproj.CopyComplete
 C:\Users\kerri\OneDrive\Documents\Quality Assurance\QAProject\QAProject\obj\Debug\QAProject.exe
 C:\Users\kerri\OneDrive\Documents\Quality Assurance\QAProject\QAProject\obj\Debug\QAProject.pdb
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\QAProject.exe.config
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\QAProject.exe
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\QAProject.pdb
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\BouncyCastle.Crypto.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\Google.Protobuf.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\K4os.Compression.LZ4.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\K4os.Hash.xxHash.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\MySql.Data.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Buffers.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Memory.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Numerics.Vectors.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\Ubiety.Dns.Core.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\WebDriver.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\ZstdNet.dll
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\Google.Protobuf.pdb
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\Google.Protobuf.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\K4os.Compression.LZ4.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\K4os.Hash.xxHash.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\MySql.Data.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Buffers.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Memory.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Numerics.Vectors.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\obj\Debug\QAProject.csproj.AssemblyReference.cache
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\obj\Debug\QAProject.csproj.CoreCompileInputs.cache
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\obj\Debug\QAProject.csproj.CopyComplete
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\obj\Debug\QAProject.exe
+C:\Classes\QA\QA_Project_Site8\QAProject\QAProject\obj\Debug\QAProject.pdb
