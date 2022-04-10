@@ -80,6 +80,27 @@ namespace QAProject
             blnTest10 = SiteTest.Test10(driver);
             TestResult(blnTest10);
 
+            //Test #11: Follow User
+
+            //Test #12: 
+
+            //Test #13: 
+
+            //Test #14: 
+
+            //Test #15: 
+
+            //Test #16: 
+
+            //Test #17: 
+
+            //Test #18: 
+
+            //Test #19: 
+
+            //Test #20: 
+
+
             // Pause then quit
             Thread.Sleep(9000);
             driver.Quit();

@@ -241,26 +241,39 @@ namespace QAProject
             }
         }
 
-        //Fill forms
+        //Test #11: Follow User
+        //public static Boolean Test11(IWebDriver driver)
+        //{
+        //    try
+        //    {
+        //        fillFormLogin(driver, "nick", "");
 
+
+        //        if (driver.Url != "http://47.55.247.242/site8/index.php")
+        //        {
+        //            return true;
+        //        }
+        //        return false;
+        //    }
+        //    catch
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //Fill forms
         static void fillFormLogin(IWebDriver driver, String strScreen, String strPass)
         {
             driver.Url = "http://47.55.247.242/site8/login.php";
 
             //Screen name
-            IWebElement txtScreen = driver.FindElement(By.Id("username"));
-            txtScreen.SendKeys(strScreen);
+            SiteWebElements.TxtScreenName(driver).SendKeys(strScreen);
 
             //Password 
-            IWebElement txtPass = driver.FindElement(By.Id("password"));
-            txtPass.SendKeys(strPass);
+            SiteWebElements.TxtPassword(driver).SendKeys(strPass);
 
             //Click login button
-            IWebElement btnLogin = driver.FindElement(By.Id("button"));
-            btnLogin.Click();
-            
-            
-
+            SiteWebElements.BtnLogin(driver).Click();
 
         }
         
@@ -269,18 +282,14 @@ namespace QAProject
             driver.Url = "http://47.55.247.242/site8/index.php";
 
             //Tweet
-            IWebElement txtTweet = driver.FindElement(By.Id("mytweet"));
-            txtTweet.SendKeys(strTweet);
+            SiteWebElements.TxtTweet(driver).SendKeys(strTweet);
 
             //Click Send button
-            IWebElement btnSend = driver.FindElement(By.Id("button"));
-            btnSend.Click();
+            SiteWebElements.BtnSendTweet(driver).Click();
 
             //Search
-            IWebElement txtSearch = driver.FindElement(By.Id("search"));
-            txtSearch.SendKeys(strSearch);
+            SiteWebElements.SearchTxtBox(driver).SendKeys(strSearch);
 
-            
         }
         static void fillFormRegistration(IWebDriver driver, String strFirstName, String strLastName, String strEmail,
             String strScreen, String strPass, String strPassConfirm, String strPhone, String strAddress,
@@ -290,62 +299,55 @@ namespace QAProject
             driver.Url = "http://47.55.247.242/site8/signup.php";
 
             //First name
-            IWebElement txtFirstName = driver.FindElement(By.Id("firstname"));
-            txtFirstName.SendKeys(strFirstName);
+            SiteWebElements.TxtFirstName(driver).SendKeys(strFirstName);
 
             //Last name
-            IWebElement txtLastName = driver.FindElement(By.Id("lastname"));
-            txtLastName.SendKeys(strLastName);
+            SiteWebElements.TxtLastName(driver).SendKeys(strLastName);
 
             //Email
-            IWebElement txtEmail = driver.FindElement(By.Id("email"));
-            txtEmail.SendKeys(strEmail);
+            SiteWebElements.TxtEmail(driver).SendKeys(strEmail);
 
             //Screen name
-            IWebElement txtScreen = driver.FindElement(By.Id("username"));
-            txtScreen.SendKeys(strScreen);
+            SiteWebElements.TxtScreen(driver).SendKeys(strScreen);
 
             //Password 
-            IWebElement txtPass = driver.FindElement(By.Id("password"));
-            txtPass.SendKeys(strPass);
+            SiteWebElements.TxtPass(driver).SendKeys(strPass);
 
             //Confirm
-            IWebElement txtPassConfirm = driver.FindElement(By.Id("confirm"));
-            txtPassConfirm.SendKeys(strPassConfirm);
+            SiteWebElements.TxtPassConfirm(driver).SendKeys(strPassConfirm);
 
             //Phone
-            IWebElement txtPhone = driver.FindElement(By.Id("phone"));
-            txtPhone.SendKeys(strPhone);
+            SiteWebElements.TxtPhone(driver).SendKeys(strPhone);
 
             //Address
-            IWebElement txtAddress = driver.FindElement(By.Id("address"));
-            txtAddress.SendKeys(strAddress);
+            SiteWebElements.TxtAddress(driver).SendKeys(strAddress);
 
             //Province
-            IWebElement ddlProvince = driver.FindElement(By.Id("province"));
-            ddlProvince.SendKeys(strProvince);
+            SiteWebElements.DdlProvince(driver).SendKeys(strProvince);
 
             //Postal Code
-            IWebElement txtPostal = driver.FindElement(By.Id("postalCode"));
-            txtPostal.SendKeys(strPostal);
+            SiteWebElements.TxtPostal(driver).SendKeys(strPostal);
 
             //URL
-            IWebElement txtURL = driver.FindElement(By.Id("url"));
-            txtURL.SendKeys(strURL);
+            SiteWebElements.TxtURL(driver).SendKeys(strURL);
 
             //Description
-            IWebElement txtDesc = driver.FindElement(By.Id("desc"));
-            txtDesc.SendKeys(strDesc);
+            SiteWebElements.TxtDesc(driver).SendKeys(strDesc);
 
             //Location
-            IWebElement txtLocation = driver.FindElement(By.Id("location"));
-            txtLocation.SendKeys(strLocation);
+            SiteWebElements.TxtLocation(driver).SendKeys(strLocation);
 
             //Click register button
-            IWebElement btnRegister = driver.FindElement(By.Id("button"));
-            btnRegister.Click();
+            SiteWebElements.BtnRegister(driver).Click();
 
         }
+
+        //static void FollowUser(IWebDriver driver)
+        //{
+        //    IWebElement btnRegister = driver.FindElement(By.Id("button"));
+        //    btnRegister.Click();
+
+        //}
 
 
 
