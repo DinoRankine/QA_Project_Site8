@@ -14,22 +14,23 @@ namespace QAProject
     {
         private static MySqlConnection connection;
 
-        public static void SiteReset()
-        {
-            string myConnectionString = "server=47.55.247.242;database=bitter-site8;uid=nick;pwd=asdf;";
-            connection = new MySqlConnection(myConnectionString);
-            MySqlCommand command = new MySqlCommand();
-            command.Connection = connection;
-            command.CommandText = "reset";
-            command.CommandType = System.Data.CommandType.StoredProcedure;
+        //public static void SiteReset()
+        //{
+        //    string myConnectionString = "server=47.55.247.242;database=bitter-site8;uid=nick;pwd=asdf;";
+        //    connection = new MySqlConnection(myConnectionString);
+        //    MySqlCommand command = new MySqlCommand();
+        //    command.Connection = connection;
+        //    command.CommandText = "reset";
+        //    command.CommandType = System.Data.CommandType.StoredProcedure;
 
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
-        }
+        //    connection.Open();
+        //    command.ExecuteNonQuery();
+        //    connection.Close();
+        //}
 
         //Tests
 
+        //Test #1: Check that screen name cannot be blank when logging in
         public static Boolean Test1(IWebDriver driver)
         {
             try
@@ -49,6 +50,7 @@ namespace QAProject
             }
         }
 
+        //Test #2: Check that password cannot be blank when logging in
         public static Boolean Test2(IWebDriver driver)
         {
             try
@@ -68,6 +70,24 @@ namespace QAProject
             }
         }
 
+        //Test #3: Check that tweet can be sent
+        //public static Boolean Test3(IWebDriver driver)
+        //{
+        //    try
+        //    {
+
+        //        if ()
+        //        {
+
+        //        }
+        //    }
+        //    catch
+        //    {
+
+        //    }
+        //}
+
+        //Test #4: Check that first name cannot be blank when registering
         public static Boolean Test4(IWebDriver driver)
         {
             try
@@ -89,6 +109,7 @@ namespace QAProject
             }
         }
 
+        //Test #5: Check that last name cannot be blank when registering
         public static Boolean Test5(IWebDriver driver)
         {
             try
@@ -110,6 +131,7 @@ namespace QAProject
             }
         }
 
+        //Test #6: Check that email cannot be blank when registering
         public static Boolean Test6(IWebDriver driver)
         {
             try
@@ -131,6 +153,7 @@ namespace QAProject
             }
         }
 
+        //Test #7: Check that screen name cannot be blank when registering
         public static Boolean Test7(IWebDriver driver)
         {
             try
@@ -152,6 +175,7 @@ namespace QAProject
             }
         }
 
+        //Test #8: Check that password cannot be blank when registering
         public static Boolean Test8(IWebDriver driver)
         {
             try
@@ -173,6 +197,7 @@ namespace QAProject
             }
         }
 
+        //Test #9: Check that confirm password cannot be blank when registering
         public static Boolean Test9(IWebDriver driver)
         {
             try
@@ -194,6 +219,7 @@ namespace QAProject
             }
         }
 
+        //Test #10: Check that phone number cannot be blank when registering
         public static Boolean Test10(IWebDriver driver)
         {
             try

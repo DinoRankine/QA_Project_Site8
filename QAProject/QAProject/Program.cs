@@ -15,7 +15,7 @@ namespace QAProject
         static void Main(string[] args)
         {
             // Reset site
-            SiteTest.SiteReset();
+            //SiteTest.SiteReset();
 
             //Web Driver
             IWebDriver driver = new ChromeDriver(@"C:\Selenium");
@@ -33,10 +33,10 @@ namespace QAProject
             TestResult(blnTest02);
 
             //Test #3: Check that tweet can be sent
-            Console.WriteLine("Test #3: Check that tweet can be sent");
-            Boolean blnTest03;
-            blnTest03 = SiteTest.Test3(driver);
-            TestResult(blnTest03);
+            //Console.WriteLine("Test #3: Check that tweet can be sent");
+            //Boolean blnTest03;
+            //blnTest03 = SiteTest.Test3(driver);
+            //TestResult(blnTest03);
 
             //Test #4: Check that first name cannot be blank when registering
             Console.WriteLine("Test #4: Check that first name cannot be blank when registering");
@@ -79,8 +79,13 @@ namespace QAProject
             Boolean blnTest10;
             blnTest10 = SiteTest.Test10(driver);
             TestResult(blnTest10);
+
+            // Pause then quit
+            Thread.Sleep(9000);
+            driver.Quit();
         }
 
+        // Send pass or fail to the console
         static void TestResult(Boolean blnResult)
         {
             if (blnResult)
