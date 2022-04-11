@@ -375,6 +375,26 @@ namespace QAProject
             }
         }
 
+        //Test #17: Check that messages link in nav bar works
+        public static Boolean Test17(IWebDriver driver)
+        {
+            try
+            {
+                messagesLink(driver);
+
+
+                if (driver.Url == "http://47.55.247.242/site8/directmessage.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         //Test #11: Follow User
         //public static Boolean Test11(IWebDriver driver)
         //{
@@ -409,6 +429,14 @@ namespace QAProject
             //Click login button
             SiteWebElements.BtnLogin(driver).Click();
 
+        }
+
+        static void messagesLink(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/login.php";
+
+            //Click the messages link
+            SiteWebElements.BtnMessages(driver).Click();
         }
         
         static void fillFormTweet(IWebDriver driver, String strTweet)

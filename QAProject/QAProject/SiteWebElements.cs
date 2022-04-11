@@ -134,7 +134,7 @@ namespace QAProject
         //"Send" button to publish your tweet, on the home page
         public static IWebElement BtnSendTweet (IWebDriver driver)
         {
-            IWebElement btnSendTweet = driver.FindElement(By.XPath("//input[@id='button']"));
+            IWebElement btnSendTweet = driver.FindElement(By.Id("//input[@id='button']"));
             return btnSendTweet;
         }
 
