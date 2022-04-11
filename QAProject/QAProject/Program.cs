@@ -15,7 +15,7 @@ namespace QAProject
         static void Main(string[] args)
         {
             // Reset site
-            //SiteTest.SiteReset();
+            SiteTest.SiteReset();
 
             //Web Driver
             IWebDriver driver = new ChromeDriver(@"C:\Selenium");

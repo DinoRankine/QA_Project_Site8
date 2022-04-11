@@ -14,19 +14,19 @@ namespace QAProject
     {
         private static MySqlConnection connection;
 
-        //public static void SiteReset()
-        //{
-        //    string myConnectionString = "server=47.55.247.242;database=bitter-site8;uid=nick;pwd=asdf;";
-        //    connection = new MySqlConnection(myConnectionString);
-        //    MySqlCommand command = new MySqlCommand();
-        //    command.Connection = connection;
-        //    command.CommandText = "reset";
-        //    command.CommandType = System.Data.CommandType.StoredProcedure;
+        public static void SiteReset()
+        {
+            string myConnectionString = "server=47.55.247.242;database=bitter-site8;uid=site8;pwd=gP0Sdwf0Ga4Tij20;";
+            connection = new MySqlConnection(myConnectionString);
+            MySqlCommand command = new MySqlCommand();
+            command.Connection = connection;
+            command.CommandText = "reset";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
 
-        //    connection.Open();
-        //    command.ExecuteNonQuery();
-        //    connection.Close();
-        //}
+            connection.Open();
+            command.ExecuteNonQuery();
+            connection.Close();
+        }
 
         //Tests
 
