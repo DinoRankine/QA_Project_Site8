@@ -71,21 +71,23 @@ namespace QAProject
         }
 
         //Test #3: Check that tweet can be sent
-        //public static Boolean Test3(IWebDriver driver)
-        //{
-        //    try
-        //    {
+        public static Boolean Test3(IWebDriver driver)
+        {
+            try
+           {
+                fillFormTweet(driver, "Tweet");
 
-        //        if ()
-        //        {
-
-        //        }
-        //    }
-        //    catch
-        //    {
-
-        //    }
-        //}
+                if (driver.Url == "http://47.55.247.242/site8/index.php?message=Tweet%20Successfully%20saved")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         //Test #4: Check that first name cannot be blank when registering
         public static Boolean Test4(IWebDriver driver)
@@ -241,6 +243,138 @@ namespace QAProject
             }
         }
 
+        //Test #11: Check that address cannot be blank when registering
+        public static Boolean Test11(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Kate", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "", "New Brunswick",
+            "A1B 2C3", "bitter.com", "This is a site description", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #12: Check that a province must be chosen from the dropdown menu when registering
+        public static Boolean Test12(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Kate", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "",
+            "A1B 2C3", "bitter.com", "This is a site description", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #13: Check that postal code cannot be blank when registering
+        public static Boolean Test13(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Kate", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "", "bitter.com", "This is a site description", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #14: Check that URL cannot be blank when registering
+        public static Boolean Test14(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Kate", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "A1B 3C4", "", "This is a site description", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #15: Check that description cannot be blank when registering
+        public static Boolean Test15(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Kate", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "A1B 3C4", "bitter.com", "", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #16: Check that location cannot be blank when registering
+        public static Boolean Test16(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Kate", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "A1B 3C4", "bitter.com", "This is a website", "");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         //Test #11: Follow User
         //public static Boolean Test11(IWebDriver driver)
         //{
@@ -277,7 +411,7 @@ namespace QAProject
 
         }
         
-        static void fillFormIndex(IWebDriver driver, String strTweet, String strSearch)
+        static void fillFormTweet(IWebDriver driver, String strTweet)
         {
             driver.Url = "http://47.55.247.242/site8/index.php";
 
@@ -287,8 +421,7 @@ namespace QAProject
             //Click Send button
             SiteWebElements.BtnSendTweet(driver).Click();
 
-            //Search
-            SiteWebElements.SearchTxtBox(driver).SendKeys(strSearch);
+           
 
         }
         static void fillFormRegistration(IWebDriver driver, String strFirstName, String strLastName, String strEmail,

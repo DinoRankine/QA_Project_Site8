@@ -33,10 +33,10 @@ namespace QAProject
             TestResult(blnTest02);
 
             //Test #3: Check that tweet can be sent
-            //Console.WriteLine("Test #3: Check that tweet can be sent");
-            //Boolean blnTest03;
-            //blnTest03 = SiteTest.Test3(driver);
-            //TestResult(blnTest03);
+            Console.WriteLine("Test #3: Check that tweet can be sent");
+            Boolean blnTest03;
+            blnTest03 = SiteTest.Test3(driver);
+            TestResult(blnTest03);
 
             //Test #4: Check that first name cannot be blank when registering
             Console.WriteLine("Test #4: Check that first name cannot be blank when registering");
@@ -80,17 +80,41 @@ namespace QAProject
             blnTest10 = SiteTest.Test10(driver);
             TestResult(blnTest10);
 
-            //Test #11: Follow User
+            //Test #11: Check that address cannot be blank when registering
+            Console.WriteLine("Test #11: Check that address cannot be blank when registering");
+            Boolean blnTest11;
+            blnTest11 = SiteTest.Test11(driver);
+            TestResult(blnTest11);
 
-            //Test #12: 
+            //Test #12: Check that province cannot be blank when registering
+            Console.WriteLine("Test #12: Check that a province must be chosen from the dropdown menu when registering");
+            Boolean blnTest12;
+            blnTest12 = SiteTest.Test12(driver);
+            TestResult(blnTest12);
 
-            //Test #13: 
+            //Test #13: Check that postal code cannot be blank when registering
+            Console.WriteLine("Test #13: Check that postal code cannot be blank when registering");
+            Boolean blnTest13;
+            blnTest13 = SiteTest.Test13(driver);
+            TestResult(blnTest13);
 
-            //Test #14: 
+            //Test #14: Check that URL cannot be blank when registering
+            Console.WriteLine("Test #14: Check that URL cannot be blank when registering");
+            Boolean blnTest14;
+            blnTest14 = SiteTest.Test14(driver);
+            TestResult(blnTest14);
 
-            //Test #15: 
+            //Test #15: Check that description cannot be blank when registering
+            Console.WriteLine("Test #15: Check that description cannot be blank when registering");
+            Boolean blnTest15;
+            blnTest15 = SiteTest.Test15(driver);
+            TestResult(blnTest15);
 
-            //Test #16: 
+            //Test #16: Check that location cannot be blank when registering
+            Console.WriteLine("Test #16: Check that location cannot be blank when registering");
+            Boolean blnTest16;
+            blnTest16 = SiteTest.Test16(driver);
+            TestResult(blnTest16);
 
             //Test #17: 
 
