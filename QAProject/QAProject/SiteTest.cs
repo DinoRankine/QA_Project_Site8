@@ -395,6 +395,65 @@ namespace QAProject
             }
         }
 
+        //Test #18: Check that contact link in nav bar works
+        public static Boolean Test18(IWebDriver driver)
+        {
+            try
+            {
+                contactUsLink(driver);
+
+
+                if (driver.Url == "http://47.55.247.242/site8/ContactUs.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #19: Check that notifications link in nav bar works
+        public static Boolean Test19(IWebDriver driver)
+        {
+            try
+            {
+                notificationsLink(driver);
+
+
+                if (driver.Url == "http://47.55.247.242/site8/Notifications.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #20: Check that log out button works
+        public static Boolean Test20(IWebDriver driver)
+        {
+            try
+            {
+                logoutLink(driver);
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         //Test #11: Follow User
         //public static Boolean Test11(IWebDriver driver)
         //{
@@ -431,12 +490,40 @@ namespace QAProject
 
         }
 
+        static void logoutLink(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/index.php";
+
+            //Click profile picture drop down menu
+            SiteWebElements.DrpDownLogoutEdit(driver).Click();
+
+            //Click log out 
+            SiteWebElements.BtnLogout(driver).Click();
+        }
+
         static void messagesLink(IWebDriver driver)
         {
-            driver.Url = "http://47.55.247.242/site8/login.php";
+            driver.Url = "http://47.55.247.242/site8/directmessage.php";
 
             //Click the messages link
             SiteWebElements.BtnMessages(driver).Click();
+        }
+
+        static void contactUsLink(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/ContactUs.php";
+
+            //Click the contact us link
+            SiteWebElements.BtnContact(driver).Click();
+
+        }
+
+        static void notificationsLink(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/Notifications.php";
+
+            //Click the notifications link
+            SiteWebElements.BtnNotify(driver).Click();
         }
         
         static void fillFormTweet(IWebDriver driver, String strTweet)

@@ -118,7 +118,7 @@ namespace QAProject
         //contact us button in top navigation bar on main login page
         public static IWebElement BtnContact (IWebDriver driver)
         {
-            IWebElement btnContact = driver.FindElement(By.XPath("//a[@id='navbarsExampleDefault']/a[2]/img"));
+            IWebElement btnContact = driver.FindElement(By.LinkText("Contact Us"));
             return btnContact;
         }
 
@@ -145,6 +145,14 @@ namespace QAProject
             return btnMessages;
         }
 
+        //"Notifications" link on top nav bar on home page
+        public static IWebElement BtnNotify(IWebDriver driver)
+        {
+            IWebElement btnNotify = driver.FindElement(By.LinkText("Notifications"));
+            return btnNotify;
+        }
+
+
         //"Search" text box on top nav bar on home page
         public static IWebElement SearchTxtBox (IWebDriver driver)
         {
@@ -164,6 +172,12 @@ namespace QAProject
         {
             IWebElement drpdownLogoutEdit = driver.FindElement(By.Id("dropdown01"));
             return drpdownLogoutEdit;
+        }
+
+        public static IWebElement BtnLogout(IWebDriver driver)
+        {
+            IWebElement btnLogout = driver.FindElement(By.LinkText("Logout"));
+            return btnLogout;
         }
 
         //Follow button under "Who to Troll?"

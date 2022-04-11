@@ -117,16 +117,28 @@ namespace QAProject
             TestResult(blnTest16);
 
             //Test #17: Check that messages link in nav bar works
-            Console.WriteLine("Check that messages link in nav bar works");
+            Console.WriteLine("Test #17: Check that messages link in nav bar works");
             Boolean blnTest17;
             blnTest17 = SiteTest.Test17(driver);
             TestResult(blnTest17);
 
-            //Test #18: 
+            //Test #18: Check that the contact us link in nav bar works
+            Console.WriteLine("Test #18: Check that contact us link in nav bar works");
+            Boolean blnTest18;
+            blnTest18 = SiteTest.Test18(driver);
+            TestResult(blnTest18);
 
-            //Test #19: 
+            //Test #19: Check that notifications link in nav bar works
+            Console.WriteLine("Test #19: Check that notifications link in nav bar works");
+            Boolean blnTest19;
+            blnTest19 = SiteTest.Test19(driver);
+            TestResult(blnTest19);
 
-            //Test #20: 
+            //Test #20: Check that log out button works
+            Console.WriteLine("Test #20: Check that log out button works");
+            Boolean blnTest20;
+            blnTest20 = SiteTest.Test20(driver);
+            TestResult(blnTest20);
 
 
             // Pause then quit
