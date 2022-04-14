@@ -115,13 +115,6 @@ namespace QAProject
             return linkSignUp;
         }
 
-        //contact us button in top navigation bar on main login page
-        public static IWebElement BtnContact (IWebDriver driver)
-        {
-            IWebElement btnContact = driver.FindElement(By.LinkText("Contact Us"));
-            return btnContact;
-        }
-
         //--------------------WEB ELEMENTS FROM HOME PAGE ONCE LOGGED IN---------------------
 
         //tweet text space on home page
@@ -131,24 +124,39 @@ namespace QAProject
             return txtTweet;
         }
 
+        //unfocus text box by clicking the body of the page
+        public static IWebElement Unfocus(IWebDriver driver)
+        {
+            IWebElement unfocus = driver.FindElement(By.XPath("/html/body"));
+            return unfocus;
+        }
+
         //"Send" button to publish your tweet, on the home page
         public static IWebElement BtnSendTweet (IWebDriver driver)
         {
-            IWebElement btnSendTweet = driver.FindElement(By.Id("//input[@id='button']"));
+            IWebElement btnSendTweet = driver.FindElement(By.XPath("//*[@id=\"button\"]"));
             return btnSendTweet;
+        }
+
+        //contact us button in top navigation bar on index page
+        public static IWebElement BtnContact(IWebDriver driver)
+        {
+            IWebElement btnContact = driver.FindElement(By.XPath("//*[@id=\"navbarsExampleDefault\"]/ul/li[6]/a"));
+            return btnContact;
         }
 
         //"Messages" link on top nav bar on home page
         public static IWebElement BtnMessages (IWebDriver driver)
         {
-            IWebElement btnMessages  = driver.FindElement(By.LinkText("Messages"));
+            IWebElement btnMessages  = driver.FindElement(By.XPath("//*[@id=\"navbarsExampleDefault\"]/ul/li[4]/a"));
             return btnMessages;
         }
+
 
         //"Notifications" link on top nav bar on home page
         public static IWebElement BtnNotify(IWebDriver driver)
         {
-            IWebElement btnNotify = driver.FindElement(By.LinkText("Notifications"));
+            IWebElement btnNotify = driver.FindElement(By.XPath("//*[@id=\"navbarsExampleDefault\"]/ul/li[3]/a"));
             return btnNotify;
         }
 
@@ -174,6 +182,13 @@ namespace QAProject
             return drpdownLogoutEdit;
         }
 
+        //Edit profile picture button
+        public static IWebElement BtnEditProfile(IWebDriver driver)
+        {
+            IWebElement btnEditProfile = driver.FindElement(By.XPath("//*[@id=\"navbarsExampleDefault\"]/li/div/a[2]"));
+            return btnEditProfile;
+        }
+
         //Logout button
         public static IWebElement BtnLogout(IWebDriver driver)
         {
@@ -184,21 +199,21 @@ namespace QAProject
         //Follow button under "Who to Troll?"
         public static IWebElement BtnFollow(IWebDriver driver)
         {
-            IWebElement btnFollow = driver.FindElement(By.ClassName("followbutton"));
+            IWebElement btnFollow = driver.FindElement(By.XPath("/html/body/div/div/div[3]/div/form[1]/input[1]"));
             return btnFollow;
         }
 
         //Moments button
         public static IWebElement BtnMoments(IWebDriver driver)
         {
-            IWebElement btnMoments = driver.FindElement(By.LinkText("Moments"));
+            IWebElement btnMoments = driver.FindElement(By.XPath("//*[@id=\"navbarsExampleDefault\"]/ul/li[2]/a"));
             return btnMoments;
         }
 
         //Index page link
         public static IWebElement BtnIndex(IWebDriver driver)
         {
-            IWebElement btnIndex = driver.FindElement(By.LinkText("Home"));
+            IWebElement btnIndex = driver.FindElement(By.XPath("//*[@id = \"navbarsExampleDefault\"] / ul / li[1] / a"));
             return btnIndex;
         }
     }

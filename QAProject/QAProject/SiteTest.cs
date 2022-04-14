@@ -75,7 +75,7 @@ namespace QAProject
         {
             try
            {
-                fillFormTweet(driver, "Tweet");
+                fillFormTweet(driver, "This is a tweet");
 
                 if (driver.Url == "http://47.55.247.242/site8/index.php?message=Tweet%20Successfully%20saved")
                 {
@@ -529,6 +529,23 @@ namespace QAProject
             }
         }
 
+        //Test #25: Test profile picture button
+        public static Boolean Test25(IWebDriver driver)
+        {
+            try
+            {
+                ProfileEdit(driver);
+                if (driver.Url == "http://47.55.247.242/site8/edit_photo.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         //-------------------Fill forms------------------------------------
 
@@ -560,7 +577,7 @@ namespace QAProject
 
         static void messagesLink(IWebDriver driver)
         {
-            driver.Url = "http://47.55.247.242/site8/directmessage.php";
+            driver.Url = "http://47.55.247.242/site8/index.php";
 
             //Click the messages link
             SiteWebElements.BtnMessages(driver).Click();
@@ -568,7 +585,7 @@ namespace QAProject
 
         static void contactUsLink(IWebDriver driver)
         {
-            driver.Url = "http://47.55.247.242/site8/ContactUs.php";
+            driver.Url = "http://47.55.247.242/site8/index.php";
 
             //Click the contact us link
             SiteWebElements.BtnContact(driver).Click();
@@ -577,7 +594,7 @@ namespace QAProject
 
         static void notificationsLink(IWebDriver driver)
         {
-            driver.Url = "http://47.55.247.242/site8/Notifications.php";
+            driver.Url = "http://47.55.247.242/site8/index.php";
 
             //Click the notifications link
             SiteWebElements.BtnNotify(driver).Click();
@@ -588,7 +605,9 @@ namespace QAProject
             driver.Url = "http://47.55.247.242/site8/index.php";
 
             //Tweet
+            SiteWebElements.TxtTweet(driver).Click();
             SiteWebElements.TxtTweet(driver).SendKeys(strTweet);
+            SiteWebElements.Unfocus(driver).Click();
 
             //Click Send button
             SiteWebElements.BtnSendTweet(driver).Click();
@@ -616,6 +635,18 @@ namespace QAProject
             driver.Url = "http://47.55.247.242/site8/Notifications.php";
             //click index button
             SiteWebElements.BtnIndex(driver).Click();
+        }
+
+        //profile pic edit button
+        static void ProfileEdit(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/index.php";
+
+            //Click profile picture drop down menu
+            SiteWebElements.DrpDownLogoutEdit(driver).Click();
+
+            //Click profile picture edit
+            SiteWebElements.BtnEditProfile(driver).Click();
         }
 
 
