@@ -116,6 +116,7 @@ namespace QAProject
             blnTest16 = SiteTest.Test16(driver);
             TestResult(blnTest16);
 
+
             //Test #17: Check that messages link in nav bar works
             Console.WriteLine("Test #17: Check that messages link in nav bar works");
             Boolean blnTest17;
@@ -134,16 +135,28 @@ namespace QAProject
             blnTest19 = SiteTest.Test19(driver);
             TestResult(blnTest19);
 
-            //Test #20: Check that log out button works
-            Console.WriteLine("Test #20: Check that log out button works");
-            Boolean blnTest20;
-            blnTest20 = SiteTest.Test20(driver);
-            TestResult(blnTest20);
+            //Test #22: Check that the moments page works
+            Console.WriteLine("Test #22: Check that the moments page works");
+            Boolean blnTest22;
+            blnTest22 = SiteTest.Test22(driver);
+            TestResult(blnTest22);
+
+            //Test #20: Check that follow user works
+            //Console.WriteLine("Test #20: Follow User");
+            //Boolean blnTest20;
+            //blnTest20 = SiteTest.Test20(driver);
+            //TestResult(blnTest20);
+
+            //Test #21: Check that log out button works
+            //Console.WriteLine("Test #21: Check that log out button works");
+            //Boolean blnTest21;
+            //blnTest21 = SiteTest.Test21(driver);
+            //TestResult(blnTest21);
 
 
             // Pause then quit
-            Thread.Sleep(9000);
-            driver.Quit();
+            //Thread.Sleep(9000);
+            //driver.Quit();
         }
 
         // Send pass or fail to the console

@@ -435,8 +435,44 @@ namespace QAProject
             }
         }
 
-        //Test #20: Check that log out button works
+        //Test #22: Check that the moments page works
+        public static Boolean Test22(IWebDriver driver)
+        {
+            try
+            {
+                MomentsButton(driver);
+                if (driver.Url == "http://47.55.247.242/site8/Notifications.php#")
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
+        //Test #20: Check that follow user works
         public static Boolean Test20(IWebDriver driver)
+        {
+            try
+            {
+                FollowUser(driver);
+                if (driver.Url.Contains("http://47.55.247.242/site8/index.php?message=Succesfully%20followed%20user:%20@"))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #21: Check that log out button works
+        public static Boolean Test21(IWebDriver driver)
         {
             try
             {
@@ -454,27 +490,10 @@ namespace QAProject
                 return false;
             }
         }
-        //Test #11: Follow User
-        //public static Boolean Test11(IWebDriver driver)
-        //{
-        //    try
-        //    {
-        //        fillFormLogin(driver, "nick", "");
 
 
-        //        if (driver.Url != "http://47.55.247.242/site8/index.php")
-        //        {
-        //            return true;
-        //        }
-        //        return false;
-        //    }
-        //    catch
-        //    {
-        //        return false;
-        //    }
-        //}
+        //-------------------Fill forms------------------------------------
 
-        //Fill forms
         static void fillFormLogin(IWebDriver driver, String strScreen, String strPass)
         {
             driver.Url = "http://47.55.247.242/site8/login.php";
@@ -536,9 +555,8 @@ namespace QAProject
             //Click Send button
             SiteWebElements.BtnSendTweet(driver).Click();
 
-           
-
         }
+
         static void fillFormRegistration(IWebDriver driver, String strFirstName, String strLastName, String strEmail,
             String strScreen, String strPass, String strPassConfirm, String strPhone, String strAddress,
             String strProvince, String strPostal, String strURL, String strDesc, String strLocation)
@@ -590,14 +608,15 @@ namespace QAProject
 
         }
 
-        //static void FollowUser(IWebDriver driver)
-        //{
-        //    IWebElement btnRegister = driver.FindElement(By.Id("button"));
-        //    btnRegister.Click();
+        static void FollowUser(IWebDriver driver)
+        {
+            SiteWebElements.BtnFollow(driver).Click();
+        }
 
-        //}
-
-
+        static void MomentsButton(IWebDriver driver)
+        {
+            SiteWebElements.BtnMoments(driver).Click();
+        }
 
     }
 }

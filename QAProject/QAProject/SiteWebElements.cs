@@ -186,5 +186,12 @@ namespace QAProject
             IWebElement btnFollow = driver.FindElement(By.ClassName("followbutton"));
             return btnFollow;
         }
+
+        //Moments button
+        public static IWebElement BtnMoments(IWebDriver driver)
+        {
+            IWebElement btnMoments = driver.FindElement(By.LinkText("Moments"));
+            return btnMoments;
+        }
     }
 }
