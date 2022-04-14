@@ -375,6 +375,72 @@ namespace QAProject
             }
         }
 
+        //Test #26: Check that you can register with special characters as first name
+        public static Boolean Test26(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "&^%^&#", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "A1B 3C4", "bitter.com", "", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #27: Check that you can register with email in wrong format
+        public static Boolean Test27(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Jane", "Daley", "mkatedaleygmailcom",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "A1B 3C4", "bitter.com", "", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #28: Check that you can register with special characters as postal code
+        public static Boolean Test28(IWebDriver driver)
+        {
+            try
+            {
+                fillFormRegistration(driver, "Jane", "Daley", "mkatedaley@gmail.com",
+            "screenname", "pass", "pass", "1234567890", "123 Cat Street", "New Brunswick",
+            "*&^*&^", "bitter.com", "", "Fredericton");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         //Test #17: Check that messages link in nav bar works
         public static Boolean Test17(IWebDriver driver)
         {

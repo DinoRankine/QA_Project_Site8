@@ -176,6 +176,24 @@ namespace QAProject
             blnTest21 = SiteTest.Test21(driver);
             TestResult(blnTest21);
 
+            //Test #26: Check that you can register with special characters as first name
+            Console.WriteLine("Test #26: Check that you can register with special characters as first name");
+            Boolean blnTest26;
+            blnTest26 = SiteTest.Test26(driver);
+            TestResult(blnTest26);
+
+            //Test #27: Check that you can register with email in wrong format
+            Console.WriteLine("Test #27: Check that you can register with email in wrong format");
+            Boolean blnTest27;
+            blnTest27 = SiteTest.Test27(driver);
+            TestResult(blnTest27);
+
+            //Test #28: Check that you can register with special characters as postal code
+            Console.WriteLine("Test #28: Check that you can register with special characters as postal code");
+            Boolean blnTest28;
+            blnTest28 = SiteTest.Test28(driver);
+            TestResult(blnTest28);
+
             // Pause then quit
             Thread.Sleep(9000);
             driver.Quit();
