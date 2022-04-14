@@ -35,7 +35,7 @@ namespace QAProject
         {
             try
             {
-                fillFormLogin(driver, "", "asdf");
+                FillFormLogin(driver, "", "asdf");
 
 
                 if (driver.Url != "http://47.55.247.242/site8/index.php")
@@ -55,7 +55,7 @@ namespace QAProject
         {
             try
             {
-                fillFormLogin(driver, "nick", "");
+                FillFormLogin(driver, "nick", "");
 
 
                 if (driver.Url != "http://47.55.247.242/site8/index.php")
@@ -494,7 +494,7 @@ namespace QAProject
 
         //-------------------Fill forms------------------------------------
 
-        static void fillFormLogin(IWebDriver driver, String strScreen, String strPass)
+        static void FillFormLogin(IWebDriver driver, String strScreen, String strPass)
         {
             driver.Url = "http://47.55.247.242/site8/login.php";
 

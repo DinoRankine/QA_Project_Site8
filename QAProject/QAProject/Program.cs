@@ -148,10 +148,10 @@ namespace QAProject
             //TestResult(blnTest20);
 
             //Test #21: Check that log out button works
-            //Console.WriteLine("Test #21: Check that log out button works");
-            //Boolean blnTest21;
-            //blnTest21 = SiteTest.Test21(driver);
-            //TestResult(blnTest21);
+            Console.WriteLine("Test #21: Check that log out button works");
+            Boolean blnTest21;
+            blnTest21 = SiteTest.Test21(driver);
+            TestResult(blnTest21);
 
 
             // Pause then quit
