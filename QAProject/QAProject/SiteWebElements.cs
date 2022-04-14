@@ -174,6 +174,7 @@ namespace QAProject
             return drpdownLogoutEdit;
         }
 
+        //Logout button
         public static IWebElement BtnLogout(IWebDriver driver)
         {
             IWebElement btnLogout = driver.FindElement(By.LinkText("Logout"));
@@ -192,6 +193,13 @@ namespace QAProject
         {
             IWebElement btnMoments = driver.FindElement(By.LinkText("Moments"));
             return btnMoments;
+        }
+
+        //Index page link
+        public static IWebElement BtnIndex(IWebDriver driver)
+        {
+            IWebElement btnIndex = driver.FindElement(By.LinkText("Home"));
+            return btnIndex;
         }
     }
 }

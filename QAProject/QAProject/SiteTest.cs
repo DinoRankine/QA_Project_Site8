@@ -435,24 +435,6 @@ namespace QAProject
             }
         }
 
-        //Test #22: Check that the moments page works
-        public static Boolean Test22(IWebDriver driver)
-        {
-            try
-            {
-                MomentsButton(driver);
-                if (driver.Url == "http://47.55.247.242/site8/Notifications.php#")
-                {
-                    return false;
-                }
-                return true;
-            }
-            catch
-            {
-                return true;
-            }
-        }
-
         //Test #20: Check that follow user works
         public static Boolean Test20(IWebDriver driver)
         {
@@ -480,6 +462,62 @@ namespace QAProject
 
 
                 if (driver.Url == "http://47.55.247.242/site8/login.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #22: Check that the moments page works
+        public static Boolean Test22(IWebDriver driver)
+        {
+            try
+            {
+                MomentsButton(driver);
+                if (driver.Url == "http://47.55.247.242/site8/index.php#")
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
+        //Test #23: Check that the index page link works
+        public static Boolean Test23(IWebDriver driver)
+        {
+            try
+            {
+                IndexPageButton(driver);
+                if (driver.Url == "http://47.55.247.242/site8/index.php")
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Test #24: Test login works correctly
+        public static Boolean Test24(IWebDriver driver)
+        {
+            try
+            {
+                FillFormLogin(driver, "nick", "asdf");
+
+
+                if (driver.Url == "http://47.55.247.242/site8/index.php")
                 {
                     return true;
                 }
@@ -557,6 +595,30 @@ namespace QAProject
 
         }
 
+        static void FollowUser(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/index.php";
+            //click follow button
+            SiteWebElements.BtnFollow(driver).Click();
+        }
+
+        //moments page
+        static void MomentsButton(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/index.php";
+            //click moments button
+            SiteWebElements.BtnMoments(driver).Click();
+        }
+
+        //index page 
+        static void IndexPageButton(IWebDriver driver)
+        {
+            driver.Url = "http://47.55.247.242/site8/Notifications.php";
+            //click index button
+            SiteWebElements.BtnIndex(driver).Click();
+        }
+
+
         static void fillFormRegistration(IWebDriver driver, String strFirstName, String strLastName, String strEmail,
             String strScreen, String strPass, String strPassConfirm, String strPhone, String strAddress,
             String strProvince, String strPostal, String strURL, String strDesc, String strLocation)
@@ -607,16 +669,5 @@ namespace QAProject
             SiteWebElements.BtnRegister(driver).Click();
 
         }
-
-        static void FollowUser(IWebDriver driver)
-        {
-            SiteWebElements.BtnFollow(driver).Click();
-        }
-
-        static void MomentsButton(IWebDriver driver)
-        {
-            SiteWebElements.BtnMoments(driver).Click();
-        }
-
     }
 }
